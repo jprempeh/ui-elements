@@ -38,3 +38,12 @@ var MENU = [
     ]
   }
 ];
+
+$(document).ready(function () {
+	// loop over each menu function
+	$.each(MENU, function (el, index) {
+
+	});
+
+	$('.menu-item')
+});
