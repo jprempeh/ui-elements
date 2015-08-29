@@ -11,3 +11,16 @@ html, body {
   vertical-align: middle;
   margin: 0 auto;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: block;
+    position: relative;
+    float: left;
+}
+
