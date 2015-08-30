@@ -51,12 +51,12 @@ $(document).ready(function () {
 		$.each(item, function(i, el){
 			console.log('item')
 		var $menuName = $('<li />');
-		$menuName.text(el.title).appendTo($subMenu);
+		$menuName.text(el.title);
 			if(el.submenu) {
-				console.log('has sub sub menu')
-				console.log('',el.submenu)
-				createSubmenu(el.submenu).appendTo($subMenu);
+				createSubmenu(el.submenu).appendTo($menuName);
+				console.log($subMenu)
 			}
+		$menuName.appendTo($subMenu);
 		});
 		return $subMenu;
 	}
