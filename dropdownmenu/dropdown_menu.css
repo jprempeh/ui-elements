@@ -24,3 +24,34 @@ ul li {
     float: left;
 }
 
+li ul {
+    display: none;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #FFF;
+}
+
+li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+li:hover li {
+    float: none;
+}
+
+li:hover a {
+    background: violet;
+}
+
+.css-menu li ul li {
+    border-top: 0;
+}
+ul ul ul {
+    left: 100%;
+    top: 0;
+}
