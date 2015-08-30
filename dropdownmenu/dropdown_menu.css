@@ -21,7 +21,6 @@ ul {
 ul li {
     display: block;
     position: relative;
-    float: left;
 }
 
 li ul {
@@ -48,10 +47,18 @@ li:hover a {
     background: violet;
 }
 
-.css-menu li ul li {
+.main-navigation li ul li {
     border-top: 0;
 }
 ul ul ul {
     left: 100%;
     top: 0;
 }
+
+ul:before,
+ul:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+ul:after { clear: both; }

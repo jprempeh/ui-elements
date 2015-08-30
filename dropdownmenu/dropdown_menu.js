@@ -42,7 +42,7 @@ var MENU = [
 
 $(document).ready(function () {
 	// cache jQuery selectors
-	$menu = $('.menu');
+	$menu = $('.main-navigation');
 
 	// make functions
 	function createSubmenu(item) {
@@ -64,7 +64,8 @@ $(document).ready(function () {
 	function createMenu(item) {
 		// create a menu item to hold our menu
 		var $menuItem = $('<li class="menu-item" />');
-		$menuItem.text(item.title);
+		var $menuLink = $('<a href="#" />')
+		$menuLink.text(item.title).appendTo($menuItem);
 
 		// if the menu has a submenu, add the event listener
 		if (item.submenu) {
