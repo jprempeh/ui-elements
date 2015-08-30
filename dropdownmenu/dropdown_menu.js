@@ -45,30 +45,32 @@ $(document).ready(function () {
 	$menu = $('.menu');
 
 	// make functions
-	function createSubmenu(item, element) {
-		console.log(item);
-		console.log(element);
+	function createSubmenu(item) {
 		// create a menu item to hold our menu
-		var $menuItem = $('<div class="menu-item" />');
-		var $menuName = $('<span class="menu-name">');
-		$menuName.text(item.title).appendTo($menuItem);
-		$menu.append($menuItem);
+		var $subMenu = $('<ul />');
+		$.each(item, function(i, el){
+			console.log('item')
+		var $menuName = $('<li />');
+		$menuName.text(el.title).appendTo($subMenu);
+			if(el.submenu) {
+				console.log('has sub sub menu')
+				console.log('',el.submenu)
+				createSubmenu(el.submenu).appendTo($subMenu);
+			}
+		});
+		return $subMenu;
 	}
 
 	function createMenu(item) {
-		console.log(item);
 		// create a menu item to hold our menu
-		var $menuItem = $('<div class="menu-item" />');
-		var $menuName = $('<span class="menu-name">');
-		$menuName.text(item.title).appendTo($menuItem);
+		var $menuItem = $('<li class="menu-item" />');
+		$menuItem.text(item.title);
 
 		// if the menu has a submenu, add the event listener
 		if (item.submenu) {
-			console.log('has submenu')
-			$menuItem.on('hover')
+			createSubmenu(item.submenu).appendTo($menuItem);
 		}
 		$menu.append($menuItem);
-
 	}
 
 	// loop over each menu item and make a cell
