@@ -50,10 +50,12 @@ $(document).ready(function () {
 		var $subMenu = $('<ul />');
 		$.each(item, function(i, el){
 			var $menuName = $('<li class="menu-item submenu-item"/>');
-			$menuName.text(el.title);
+
+			$menuName.data('name', el.title);
+			var $menuLink = $('<a href="#" />')
+			$menuLink.text(el.title).appendTo($menuName);
 				if(el.submenu) {
 					createSubmenu(el.submenu).addClass('subsub-menu').appendTo($menuName);
-					console.log($subMenu)
 				}
 			$menuName.appendTo($subMenu);
 		});
@@ -82,17 +84,18 @@ $(document).ready(function () {
 		}
 	});
 
-	$('ul:first').on('click', 'li', function(e){
+	$('ul').on('click', 'li', function(e){
 		e.preventDefault();
 		e.stopPropagation();
 		//alert($(this).text() || $(this).contents().get(0).nodeValue);
-		alert($(this).text());
+		debugger;
+		alert($(this).data('name'));
 	})
 
-	$('ul:not(first)').on('click', 'li', function(e){
-		e.preventDefault();
-		e.stopPropagation();
-		//alert($(this).text() || $(this).contents().get(0).nodeValue);
-		alert($(this).clone().children().remove().end().text());
-	})
+	//$('ul:not(first)').on('click', 'li', function(e){
+	//	e.preventDefault();
+	//	e.stopPropagation();
+	//	//alert($(this).text() || $(this).contents().get(0).nodeValue);
+	//	alert($(this).clone().children().remove().end().text());
+	//})
 });

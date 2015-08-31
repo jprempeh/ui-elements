@@ -10,6 +10,8 @@ html, body {
   border: 1px solid black;
   vertical-align: middle;
   margin: 0 auto;
+  line-height: 70px;
+  text-align: center;
 }
 
 .menu-item .submenu-item {
@@ -29,6 +31,7 @@ ul {
 ul li {
     display: block;
     position: relative;
+
 }
 
 li ul {
@@ -36,10 +39,12 @@ li ul {
 }
 
 ul li a {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     white-space: nowrap;
     color: #FFF;
+    vertical-align: middle;
+    line-height: normal;
 }
 
 li:hover > ul {
@@ -57,7 +62,7 @@ li:hover a {
 }
 
 .main-navigation li ul li {
-    border-top: 0;
+    /*border-top: 0;*/
 }
 ul ul {
     left: 100%;
