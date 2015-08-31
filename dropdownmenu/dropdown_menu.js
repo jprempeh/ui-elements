@@ -49,14 +49,13 @@ $(document).ready(function () {
 		// create a menu item to hold our menu
 		var $subMenu = $('<ul />');
 		$.each(item, function(i, el){
-			console.log('item')
-		var $menuName = $('<li class="menu-item submenu-item"/>');
-		$menuName.text(el.title);
-			if(el.submenu) {
-				createSubmenu(el.submenu).addClass('subsub-menu').appendTo($menuName);
-				console.log($subMenu)
-			}
-		$menuName.appendTo($subMenu);
+			var $menuName = $('<li class="menu-item submenu-item"/>');
+			$menuName.text(el.title);
+				if(el.submenu) {
+					createSubmenu(el.submenu).addClass('subsub-menu').appendTo($menuName);
+					console.log($subMenu)
+				}
+			$menuName.appendTo($subMenu);
 		});
 		return $subMenu;
 	}
@@ -82,4 +81,18 @@ $(document).ready(function () {
 			createSubmenu(element.submenu)
 		}
 	});
+
+	$('ul:first').on('click', 'li', function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		//alert($(this).text() || $(this).contents().get(0).nodeValue);
+		alert($(this).text());
+	})
+
+	$('ul:not(first)').on('click', 'li', function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		//alert($(this).text() || $(this).contents().get(0).nodeValue);
+		alert($(this).clone().children().remove().end().text());
+	})
 });

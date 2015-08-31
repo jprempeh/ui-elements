@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bb61f2e-3f18-4ae9-9a90-f4f74fe93c64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dropdownmenu/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dropdownmenu/dropdown_menu.css" afterPath="$PROJECT_DIR$/dropdownmenu/dropdown_menu.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dropdownmenu/dropdown_menu.js" afterPath="$PROJECT_DIR$/dropdownmenu/dropdown_menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dropdownmenu/index.html" afterPath="$PROJECT_DIR$/dropdownmenu/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ui-design.iws" />
@@ -45,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dropdownmenu/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79310346">
+            <state vertical-scroll-proportion="-14.0">
               <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
@@ -58,17 +54,19 @@
       <file leaf-file-name="dropdown_menu.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dropdownmenu/dropdown_menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
-              <folding />
+            <state vertical-scroll-proportion="-6.428571">
+              <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+              <folding>
+                <element signature="e#11#644#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dropdown_menu.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dropdown_menu.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dropdownmenu/dropdown_menu.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.74025977">
               <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
               <folding />
             </state>
@@ -98,9 +96,9 @@
         <option value="$PROJECT_DIR$/tabbedpanel/tabbedpanel.js" />
         <option value="$PROJECT_DIR$/tabbedpanel/tabbedpanel.css" />
         <option value="$PROJECT_DIR$/tabbedpanel/index.html" />
-        <option value="$PROJECT_DIR$/dropdownmenu/dropdown_menu.js" />
         <option value="$PROJECT_DIR$/dropdownmenu/dropdown_menu.css" />
         <option value="$PROJECT_DIR$/dropdownmenu/index.html" />
+        <option value="$PROJECT_DIR$/dropdownmenu/dropdown_menu.js" />
       </list>
     </option>
   </component>
@@ -286,7 +284,13 @@
       <option name="project" value="LOCAL" />
       <updated>1440978729869</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="all working except glitch">
+      <created>1440980551538</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1440980551538</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -330,7 +334,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="everything correctly renders" />
     <MESSAGE value="stop floating" />
-    <option name="LAST_COMMIT_MESSAGE" value="stop floating" />
+    <MESSAGE value="all working except glitch" />
+    <option name="LAST_COMMIT_MESSAGE" value="all working except glitch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -408,22 +413,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dropdownmenu/dropdown_menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dropdownmenu/dropdown_menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dropdownmenu/instructions.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -434,8 +423,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dropdownmenu/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79310346">
+        <state vertical-scroll-proportion="-14.0">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dropdownmenu/dropdown_menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.428571">
+          <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+          <folding>
+            <element signature="e#11#644#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dropdownmenu/dropdown_menu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74025977">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
           <folding />
         </state>
       </provider>
