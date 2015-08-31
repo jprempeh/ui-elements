@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bb61f2e-3f18-4ae9-9a90-f4f74fe93c64" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dropdownmenu/dropdown_menu.css" afterPath="$PROJECT_DIR$/dropdownmenu/dropdown_menu.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dropdownmenu/dropdown_menu.js" afterPath="$PROJECT_DIR$/dropdownmenu/dropdown_menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ui-design.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,8 +54,8 @@
       <file leaf-file-name="dropdown_menu.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dropdownmenu/dropdown_menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33497536">
-              <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.6453202">
+              <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
               <folding>
                 <element signature="e#11#644#0" expanded="false" />
               </folding>
@@ -439,8 +439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dropdownmenu/dropdown_menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33497536">
-          <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.6453202">
+          <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
           <folding>
             <element signature="e#11#644#0" expanded="false" />
           </folding>

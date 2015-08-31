@@ -87,15 +87,6 @@ $(document).ready(function () {
 	$('ul').on('click', 'li', function(e){
 		e.preventDefault();
 		e.stopPropagation();
-		//alert($(this).text() || $(this).contents().get(0).nodeValue);
-		debugger;
 		alert($(this).data('name'));
-	})
-
-	//$('ul:not(first)').on('click', 'li', function(e){
-	//	e.preventDefault();
-	//	e.stopPropagation();
-	//	//alert($(this).text() || $(this).contents().get(0).nodeValue);
-	//	alert($(this).clone().children().remove().end().text());
-	//})
+	});
 });
