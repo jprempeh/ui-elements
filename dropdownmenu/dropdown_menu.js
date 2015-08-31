@@ -50,10 +50,10 @@ $(document).ready(function () {
 		var $subMenu = $('<ul />');
 		$.each(item, function(i, el){
 			console.log('item')
-		var $menuName = $('<li />');
+		var $menuName = $('<li class="menu-item submenu-item"/>');
 		$menuName.text(el.title);
 			if(el.submenu) {
-				createSubmenu(el.submenu).appendTo($menuName);
+				createSubmenu(el.submenu).addClass('subsub-menu').appendTo($menuName);
 				console.log($subMenu)
 			}
 		$menuName.appendTo($subMenu);

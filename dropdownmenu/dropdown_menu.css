@@ -12,6 +12,14 @@ html, body {
   margin: 0 auto;
 }
 
+.menu-item .submenu-item {
+    background-color: violet;
+}
+
+ul ul ul.subsub-menu li, .subsub-menu {
+    background-color: lightgreen !important;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -37,6 +45,7 @@ ul li a {
 li:hover > ul {
     display: block;
     position: absolute;
+    background-color: violet;
 }
 
 li:hover li {
@@ -44,13 +53,13 @@ li:hover li {
 }
 
 li:hover a {
-    background: violet;
+    /*background: violet;*/
 }
 
 .main-navigation li ul li {
     border-top: 0;
 }
-ul ul ul {
+ul ul {
     left: 100%;
     top: 0;
 }
