@@ -1,38 +1,38 @@
-var MENU = [
+var menu = [
   {
     'title': 'Item 1',
-    'submenu': null,
+    'submenu': null
   },
   {
     'title': 'Item 2',
-    'submenu': null,
+    'submenu': null
   },
   {
     'title': 'Item 3',
     'submenu': [
       {
         'title': 'Sub 1',
-        'submenu': null,
+        'submenu': null
       },
       {
         'title': 'Sub 2',
-        'submenu': null,
+        'submenu': null
       },
       {
         'title': 'Sub 3',
         'submenu': [
           {
             'title': 'SubSub 1',
-            'submenu': null,
+            'submenu': null
           },
           {
             'title': 'SubSub 2',
-            'submenu': null,
+            'submenu': null
           },
           {
             'title': 'SubSub 3',
-            'submenu': null,
-          },
+            'submenu': null
+          }
         ]
       }
     ]
@@ -42,7 +42,7 @@ var MENU = [
 // Make sure our document is ready
 $(document).ready(function () {
 	// Cache jQuery selectors
-	$menu = $('.main-navigation');
+	var $menu = $('.main-navigation');
 
 	// Create a submenu
 	function createSubmenu(item) {
@@ -77,7 +77,7 @@ $(document).ready(function () {
 	}
 
 	// Loop over each menu item and make a cell
-	$.each(MENU, function (index, element) {
+	$.each(menu, function (index, element) {
 		createMenu(element);
 		// If the menu has a submenu, create it
 		if(element.submenu) {
