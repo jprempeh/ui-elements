@@ -44,19 +44,21 @@ $(document).ready(function () {
 	// cache jQuery selectors
 	$menu = $('.main-navigation');
 
-	// make functions
+	// create a submenu function
 	function createSubmenu(item) {
-		// create a menu item to hold our menu
+		// create a submenu
 		var $subMenu = $('<ul />');
+		// for each submenu item, make a menu button
 		$.each(item, function(i, el){
 			var $menuName = $('<li class="menu-item submenu-item"/>');
-
+			// store the menu's title as a data attribute
 			$menuName.data('name', el.title);
-			var $menuLink = $('<a href="#" />')
+			var $menuLink = $('<a href="#" />');
 			$menuLink.text(el.title).appendTo($menuName);
-				if(el.submenu) {
-					createSubmenu(el.submenu).addClass('subsub-menu').appendTo($menuName);
-				}
+			if(el.submenu) {
+				// if the item has a submenu, create its submenu and append it
+				createSubmenu(el.submenu).addClass('subsub-menu').appendTo($menuName);
+			}
 			$menuName.appendTo($subMenu);
 		});
 		return $subMenu;
@@ -65,10 +67,10 @@ $(document).ready(function () {
 	function createMenu(item) {
 		// create a menu item to hold our menu
 		var $menuItem = $('<li class="menu-item" />');
-		var $menuLink = $('<a href="#" />')
+		var $menuLink = $('<a href="#" />');
+		$menuItem.data('name', item.title);
 		$menuLink.text(item.title).appendTo($menuItem);
-
-		// if the menu has a submenu, add the event listener
+		// if the submenu has a submenu, create and append the submenu
 		if (item.submenu) {
 			createSubmenu(item.submenu).appendTo($menuItem);
 		}
@@ -78,13 +80,13 @@ $(document).ready(function () {
 	// loop over each menu item and make a cell
 	$.each(MENU, function (index, element) {
 		createMenu(element);
-		// if the menu has a submenu, display it on hover
+		// if the menu has a submenu, create it
 		if(element.submenu) {
 			createSubmenu(element.submenu)
 		}
 	});
 
-	// on event click
+	// event handler for clicking on a cell
 	$('ul').on('click', 'li', function(e){
 		e.preventDefault();
 		e.stopPropagation();
