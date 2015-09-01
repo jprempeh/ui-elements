@@ -83,6 +83,7 @@ $(document).ready(function () {
 			createSubmenu(element.submenu)
 		}
 	});
+
 	// on event click
 	$('ul').on('click', 'li', function(e){
 		e.preventDefault();
