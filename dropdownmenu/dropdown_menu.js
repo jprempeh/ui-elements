@@ -39,24 +39,23 @@ var MENU = [
   }
 ];
 
-
+// Make sure our document is ready
 $(document).ready(function () {
-	// cache jQuery selectors
+	// Cache jQuery selectors
 	$menu = $('.main-navigation');
 
-	// create a submenu function
+	// Create a submenu
 	function createSubmenu(item) {
-		// create a submenu
 		var $subMenu = $('<ul />');
-		// for each submenu item, make a menu button
+		// For each submenu item, make a menu button
 		$.each(item, function(i, el){
 			var $menuName = $('<li class="menu-item submenu-item"/>');
-			// store the menu's title as a data attribute
+			// Store the menu's title as a data attribute
 			$menuName.data('name', el.title);
 			var $menuLink = $('<a href="#" />');
 			$menuLink.text(el.title).appendTo($menuName);
 			if(el.submenu) {
-				// if the item has a submenu, create its submenu and append it
+				// If the item has a submenu, create its submenu and append it
 				createSubmenu(el.submenu).addClass('subsub-menu').appendTo($menuName);
 			}
 			$menuName.appendTo($subMenu);
@@ -65,28 +64,28 @@ $(document).ready(function () {
 	}
 
 	function createMenu(item) {
-		// create a menu item to hold our menu
+		// Create a menu item to hold our menu
 		var $menuItem = $('<li class="menu-item" />');
 		var $menuLink = $('<a href="#" />');
 		$menuItem.data('name', item.title);
 		$menuLink.text(item.title).appendTo($menuItem);
-		// if the submenu has a submenu, create and append the submenu
+		// If the submenu has a submenu, create and append the submenu
 		if (item.submenu) {
 			createSubmenu(item.submenu).appendTo($menuItem);
 		}
 		$menu.append($menuItem);
 	}
 
-	// loop over each menu item and make a cell
+	// Loop over each menu item and make a cell
 	$.each(MENU, function (index, element) {
 		createMenu(element);
-		// if the menu has a submenu, create it
+		// If the menu has a submenu, create it
 		if(element.submenu) {
 			createSubmenu(element.submenu)
 		}
 	});
 
-	// event handler for clicking on a cell
+	// Event handler for clicking on a cell
 	$('ul').on('click', 'li', function(e){
 		e.preventDefault();
 		e.stopPropagation();
