@@ -202,4 +202,4 @@ Calculator.prototype = {
 		return a + b;
 	}
 };
-
+// f**k sokikom :)
