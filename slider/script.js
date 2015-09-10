@@ -1,56 +1,69 @@
 $(document).ready(function() {
 
-	$("#ionrange_1").ionRangeSlider({
+	$('#ionrange_1').ionRangeSlider({
 		min: 0,
 		max: 6000000,
-		step: 10000,
+		step: 20000,
 		type: 'double',
-		prefix: "$",
-		maxPostfix: "+",
+		prefix: '$',
+		max_postfix: '+',
 		prettify: false,
-		prettifyEnabled: true,
-		hasGrid: true,
-		gridNum: 10
+		prettify_enabled: true,
+		grid: true,
+		grid_num: 10,
+		drag_interval: true,
+		prettify_separator: ',',
+		decorate_both: true
 	});
 
-	$("#ionrange_2").ionRangeSlider({
+	$('#ionrange_2').ionRangeSlider({
 		min: 0,
-		max: 10,
-		type: 'single',
-		step: 0.1,
-		postfix: " carats",
-		prettify: false,
-		hasGrid: true
-	});
-
-	$("#ionrange_3").ionRangeSlider({
-		min: -50,
-		max: 50,
-		from: 0,
-		postfix: "°",
-		prettify: false,
-		hasGrid: true
-	});
-
-	$("#ionrange_4").ionRangeSlider({
-		values: [
-			"January", "February", "March",
-			"April", "May", "June",
-			"July", "August", "September",
-			"October", "November", "December"
-		],
-		type: 'single',
-		hasGrid: true
-	});
-
-	$("#ionrange_5").ionRangeSlider({
-		min: 10000,
-		max: 100000,
+		max: 8000,
+		type: 'double',
 		step: 100,
-		postfix: " km",
-		from: 55000,
-		hideMinMax: true,
-		hideFromTo: false
+		grid_num: 10,
+		postfix: ' sq feet',
+		prettify: false,
+		grid: true,
+		decorate_both: false,
+		prettify_separator: ',',
+		drag_interval: true
 	});
+
+	$('#ionrange_3').ionRangeSlider({
+		min: 0,
+		type: 'double',
+		max: 21800,
+		postfix: ' sq feet',
+		prettify: false,
+		grid: true,
+		prettify_separator: ',',
+		grid_num: 10,
+		step: 1000,
+		drag_interval: true
+	});
+
+	$('#ionrange_4').ionRangeSlider({
+		type: 'double',
+		min: 0,
+		max: 1000,
+		step: 50,
+		grid_num: 10,
+		grid: true,
+		prettify_separator: ",",
+		postfix: ' days',
+		decorate_both: false,
+		drag_interval: true
+	});
+
+	$('#ionrange_5').ionRangeSlider({
+		min: 0,
+		max: 11,
+		step: 1,
+		postfix: ' bedrooms',
+		grid_margin: true,
+	});
+
+	$('.irs.js-irs-0.irs-with-grid .irs-grid-text').prepend('$');
 
 });
