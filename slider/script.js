@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+	// Price slider
 	$('#ionrange_1').ionRangeSlider({
 		min: 0,
 		max: 6000000,
@@ -16,9 +17,11 @@ $(document).ready(function() {
 		decorate_both: true
 	});
 
+	//Square feet slider
 	$('#ionrange_2').ionRangeSlider({
 		min: 0,
 		max: 8000,
+		to: 4000,
 		type: 'double',
 		step: 100,
 		grid_num: 10,
@@ -30,6 +33,7 @@ $(document).ready(function() {
 		drag_interval: true
 	});
 
+	// Lot size slider
 	$('#ionrange_3').ionRangeSlider({
 		min: 0,
 		type: 'double',
@@ -43,10 +47,12 @@ $(document).ready(function() {
 		drag_interval: true
 	});
 
+	// Days on market slider
 	$('#ionrange_4').ionRangeSlider({
 		type: 'double',
 		min: 0,
 		max: 1000,
+		to: 500,
 		step: 50,
 		grid_num: 10,
 		grid: true,
@@ -56,14 +62,46 @@ $(document).ready(function() {
 		drag_interval: true
 	});
 
+	// Bedroom slider
 	$('#ionrange_5').ionRangeSlider({
 		min: 0,
 		max: 11,
-		step: 1,
+		to: 8,
+		type: 'double',
 		postfix: ' bedrooms',
-		grid_margin: true,
+		grid: true,
+		drag_interval: true,
+		decorate_both: false,
+		grid_num: 11
 	});
 
+	// Bathroom slider
+	$('#ionrange_6').ionRangeSlider({
+		min: 0,
+		max: 7,
+		to: 3,
+		type: 'double',
+		postfix: ' bathrooms',
+		grid: true,
+		drag_interval: true,
+		decorate_both: false,
+		grid_num: 7
+	});
+
+	// Year built slider
+	$('#ionrange_7').ionRangeSlider({
+		min: 1800,
+		max: 2015,
+		type: 'double',
+		grid: true,
+		step: 5,
+		drag_interval: true,
+		decorate_both: false,
+		grid_num: 10,
+		prettify_enabled: false
+	});
+
+	// Add $ to the Price grid
 	$('.irs.js-irs-0.irs-with-grid .irs-grid-text').prepend('$');
 
 });
