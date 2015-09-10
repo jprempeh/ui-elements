@@ -7,3 +7,9 @@
 .ibox-content {
     margin-left: 25px;
 }
+.m-b-sm {
+    padding: 10px 0px 5px 0px;
+}
+.m-b-sm small strong, h2, h3 {
+    margin-left: -25px;
+}

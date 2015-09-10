@@ -30,7 +30,8 @@ $(document).ready(function() {
 		grid: true,
 		decorate_both: false,
 		prettify_separator: ',',
-		drag_interval: true
+		drag_interval: true,
+		max_postfix: '+'
 	});
 
 	// Lot size slider
@@ -44,7 +45,8 @@ $(document).ready(function() {
 		prettify_separator: ',',
 		grid_num: 10,
 		step: 1000,
-		drag_interval: true
+		drag_interval: true,
+		max_postfix: '+'
 	});
 
 	// Days on market slider
@@ -59,7 +61,8 @@ $(document).ready(function() {
 		prettify_separator: ",",
 		postfix: ' days',
 		decorate_both: false,
-		drag_interval: true
+		drag_interval: true,
+		max_postfix: '+'
 	});
 
 	// Bedroom slider
@@ -72,7 +75,8 @@ $(document).ready(function() {
 		grid: true,
 		drag_interval: true,
 		decorate_both: false,
-		grid_num: 11
+		grid_num: 11,
+		max_postfix: '+'
 	});
 
 	// Bathroom slider
@@ -85,7 +89,8 @@ $(document).ready(function() {
 		grid: true,
 		drag_interval: true,
 		decorate_both: false,
-		grid_num: 7
+		grid_num: 7,
+		max_postfix: '+'
 	});
 
 	// Year built slider
